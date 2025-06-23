@@ -1,0 +1,3140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chakyarkoothu – The Classical Art of Storytelling</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:wght@400;500;600;700&family=Spectral:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Spectral", serif;
+        color: #333;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f2e8d5;
+        border-radius: 6px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(to bottom, #a67c52, #d4af37);
+        border-radius: 6px;
+        border: 2px solid #f2e8d5;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(to bottom, #7d5a3c, #c9a227);
+        box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
+      }
+
+      .main-navbar {
+        position: absolute;
+        width: 100%;
+        padding: 20px 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+        transition: all 0.3s ease;
+      }
+
+      .main-navbar.sticky {
+        position: fixed;
+        top: 0;
+        background: #33211d;
+        padding: 15px 5%;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        animation: slideDown 0.3s ease-in-out;
+      }
+
+      @keyframes slideDown {
+        from {
+          transform: translateY(-100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+
+      .logo {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: #d4af37;
+        text-decoration: none;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        color: #f5f0e6;
+        text-decoration: none;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.1rem;
+        font-weight: 500;
+        position: relative;
+        transition: color 0.3s ease;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(to right, #a67c52, #d4af37);
+        transition: width 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: #d4af37;
+      }
+
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      /* Mobile Menu Button */
+      .mobile-menu-btn {
+        display: none;
+        cursor: pointer;
+        z-index: 101;
+        position: relative;
+      }
+
+      .mobile-menu-btn .bar {
+        width: 30px;
+        height: 3px;
+        background: linear-gradient(to right, #a67c52, #d4af37);
+        margin: 6px 0;
+        transition: 0.4s;
+        border-radius: 2px;
+        box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+      }
+
+      /* Mobile Navigation */
+      .mobile-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 320px;
+        height: 100vh;
+        background: rgba(51, 33, 29, 0.98);
+        z-index: 100;
+        transition: right 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(5px);
+        border-left: 1px solid rgba(166, 124, 82, 0.3);
+        overflow-y: auto;
+      }
+
+      .mobile-nav::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25.5 25.5c0-1.1-.9-2-2-2-.4 0-.7.1-1 .3L.5 38.7c-.3.4-.5.8-.5 1.3 0 1.1.9 2 2 2 .4 0 .7-.1 1-.3l22-14.9c.3-.4.5-.8.5-1.3zm75 0c0-1.1-.9-2-2-2-.4 0-.7.1-1 .3l-22 14.9c-.3.4-.5.8-.5 1.3 0 1.1.9 2 2 2 .4 0 .7-.1 1-.3l22-14.9c.3-.4.5-.8.5-1.3z' fill='%23a67c52' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        opacity: 0.2;
+        z-index: -1;
+      }
+
+      .mobile-nav.active {
+        right: 0;
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        z-index: 102;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: rgba(51, 33, 29, 0.8);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3),
+          0 0 15px rgba(212, 175, 55, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      .close-btn:hover {
+        transform: rotate(90deg);
+        background: rgba(166, 124, 82, 0.3);
+        box-shadow: 0 0 15px rgba(212, 175, 55, 0.5),
+          0 0 20px rgba(212, 175, 55, 0.3);
+      }
+
+      .close-icon {
+        position: relative;
+        width: 20px;
+        height: 20px;
+      }
+
+      .close-icon span {
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(to right, #d4af37, #a67c52);
+        border-radius: 2px;
+        top: 50%;
+        left: 0;
+        box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+      }
+
+      .close-icon span:first-child {
+        transform: translateY(-50%) rotate(45deg);
+      }
+
+      .close-icon span:last-child {
+        transform: translateY(-50%) rotate(-45deg);
+      }
+
+      .mobile-nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        margin-top: 60px;
+      }
+
+      .mobile-nav-links a {
+        color: #f5f0e6;
+        text-decoration: none;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 22px;
+        font-weight: 500;
+        margin: 15px 0;
+        padding: 10px;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      .mobile-nav.active .mobile-nav-links a {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+
+      .mobile-nav-links a:nth-child(1) {
+        transition-delay: 0.1s;
+      }
+      .mobile-nav-links a:nth-child(2) {
+        transition-delay: 0.2s;
+      }
+      .mobile-nav-links a:nth-child(3) {
+        transition-delay: 0.3s;
+      }
+      .mobile-nav-links a:nth-child(4) {
+        transition-delay: 0.4s;
+      }
+      .mobile-nav-links a:nth-child(5) {
+        transition-delay: 0.5s;
+      }
+
+      .mobile-nav-links a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(to right, #a67c52, #d4af37);
+        transition: width 0.3s ease;
+      }
+
+      .mobile-nav-links a:hover {
+        color: #fff;
+        text-shadow: 0 0 10px #d4af37, 0 0 20px #d4af37, 0 0 30px #d4af37;
+      }
+
+      .mobile-nav-links a:hover::after {
+        width: 80%;
+        box-shadow: 0 0 8px #d4af37, 0 0 15px #d4af37;
+      }
+
+      .mobile-nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 99;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+      }
+
+      .mobile-nav-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .mobile-menu-btn.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-6px, 6px);
+        background: linear-gradient(to right, #d4af37, #a67c52);
+      }
+
+      .mobile-menu-btn.active .bar:nth-child(2) {
+        opacity: 0;
+      }
+
+      .mobile-menu-btn.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-6px, -6px);
+        background: linear-gradient(to right, #d4af37, #a67c52);
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+
+        .mobile-menu-btn {
+          display: block;
+        }
+
+        .top-navbar {
+          padding: 0 3%;
+        }
+
+        .contact-info {
+          gap: 15px;
+        }
+
+        .contact-info span {
+          display: none;
+        }
+
+        .main-navbar {
+          padding: 15px 3%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .top-navbar {
+          font-size: 12px;
+        }
+
+        .logo {
+          font-size: 1.5rem;
+        }
+      }
+
+      /* Dropdown for desktop navbar */
+      .nav-links .dropdown {
+        position: relative;
+      }
+      .nav-links .dropdown-toggle {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .nav-links .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #33211d;
+        min-width: 180px;
+        box-shadow: 0 8px 24px rgba(44,24,16,0.15);
+        border-radius: 0 0 8px 8px;
+        z-index: 200;
+        padding: 0.5rem 0;
+      }
+      .nav-links .dropdown-menu li {
+        list-style: none;
+      }
+      .nav-links .dropdown-menu a {
+        color: #f5f0e6;
+        padding: 10px 24px;
+        display: block;
+        font-size: 1rem;
+        text-shadow: none;
+        transition: background 0.2s, color 0.2s;
+      }
+      .nav-links .dropdown-menu a:hover {
+        background: #d4af37;
+        color: #33211d;
+      }
+      .nav-links .dropdown:hover .dropdown-menu,
+      .nav-links .dropdown:focus-within .dropdown-menu {
+        display: block;
+      }
+      .nav-links .dropdown-toggle i {
+        font-size: 0.9em;
+        margin-left: 4px;
+      }
+      @media (max-width: 768px) {
+        .nav-links .dropdown-menu {
+          display: none !important;
+        }
+      }
+
+      /* Mobile dropdown (expandable) */
+      .mobile-dropdown {
+        width: 100%;
+      }
+      .mobile-dropdown-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        color: #f5f0e6;
+        text-decoration: none;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 22px;
+        font-weight: 500;
+        margin: 15px 0;
+        padding: 10px;
+        position: relative;
+        text-align: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .mobile-dropdown-toggle i {
+        margin-left: 8px;
+        transition: transform 0.3s;
+      }
+      .mobile-dropdown.open .mobile-dropdown-toggle i {
+        transform: rotate(180deg);
+      }
+      .mobile-dropdown-menu {
+        display: none;
+        flex-direction: column;
+        background: rgba(51,33,29,0.95);
+        border-radius: 0 0 8px 8px;
+        margin-bottom: 8px;
+        margin-top: -8px;
+        padding-left: 20px;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+      .mobile-dropdown.open .mobile-dropdown-menu {
+        display: flex;
+      }
+      .mobile-dropdown-menu a {
+        color: #f5f0e6;
+        padding: 8px 0;
+        font-size: 18px;
+        text-align: left;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .mobile-dropdown-menu a:hover {
+        color: #d4af37;
+      }
+
+
+      .hero-section {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        overflow: hidden;
+        background: linear-gradient(
+          135deg,
+          #2c1810 0%,
+          #4a3429 50%,
+          #2c1810 100%
+        );
+      }
+
+      .hero-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("chakyar.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: blur(3px) brightness(0.4);
+        transform: scale(1.1);
+      }
+
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          45deg,
+          rgba(44, 24, 16, 0.8) 0%,
+          rgba(74, 52, 41, 0.6) 30%,
+          rgba(139, 89, 42, 0.4) 60%,
+          rgba(44, 24, 16, 0.8) 100%
+        );
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 10;
+        text-align: left;
+        max-width: 585px;
+        padding: 0 60px;
+        margin-left: 0;
+        opacity: 0;
+        transform: translateY(50px);
+        animation: fadeInUp 2s ease-out 0.5s forwards;
+      }
+
+      .hero-title {
+        font-family: "Cinzel", serif;
+        font-size: clamp(1.625rem, 3.25vw, 2.925rem);
+        font-weight: 600;
+        color: #f4f1e8;
+        margin-bottom: 0.975rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        letter-spacing: 1.3px;
+        position: relative;
+      }
+
+      .hero-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        transform: translateX(0);
+        width: 52px;
+        height: 2px;
+        background: linear-gradient(90deg, #d4af37, transparent);
+        opacity: 0;
+        animation: fadeIn 1s ease-out 1.5s forwards;
+      }
+
+      .hero-subtitle {
+        font-family: "Crimson Text", serif;
+        font-size: clamp(0.715rem, 1.625vw, 1.17rem);
+        color: #e8dcc0;
+        margin-bottom: 1.95rem;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 1.4;
+        opacity: 0;
+        animation: fadeIn 1.5s ease-out 1s forwards;
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 1.3rem;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        opacity: 0;
+        animation: fadeIn 1.5s ease-out 1.8s forwards;
+      }
+
+      .hero-btn {
+        padding: 10.4px 20.8px;
+        font-family: "Cinzel", serif;
+        font-size: 0.715rem;
+        font-weight: 500;
+        text-decoration: none;
+        border-radius: 50px;
+        transition: all 0.4s ease;
+        letter-spacing: 0.65px;
+        position: relative;
+        overflow: hidden;
+        text-transform: uppercase;
+        cursor: pointer;
+        border: none;
+        backdrop-filter: blur(10px);
+      }
+
+      .hero-btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.1),
+          transparent
+        );
+        transition: left 0.5s;
+      }
+
+      .hero-btn:hover::before {
+        left: 100%;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #d4af37, #b8941f);
+        color: #2c1810;
+        box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 35px rgba(212, 175, 55, 0.4);
+        background: linear-gradient(135deg, #e6c247, #d4af37);
+      }
+
+      .btn-secondary {
+        background: rgba(244, 241, 232, 0.1);
+        color: #f4f1e8;
+        border: 2px solid rgba(212, 175, 55, 0.6);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn-secondary:hover {
+        transform: translateY(-3px);
+        background: rgba(212, 175, 55, 0.2);
+        border-color: #d4af37;
+        box-shadow: 0 12px 35px rgba(212, 175, 55, 0.3);
+      }
+
+      .sacred-symbol {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 60px;
+        opacity: 0.3;
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .sacred-symbol::before {
+        content: "🕉️";
+        font-size: 2.5rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #d4af37;
+        filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateX(-50%) translateY(0px);
+        }
+        50% {
+          transform: translateX(-50%) translateY(-10px);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-content {
+          padding: 0 30px;
+        }
+
+        .hero-buttons {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.975rem;
+        }
+
+        .hero-btn {
+          width: auto;
+          max-width: 182px;
+          padding: 9.1px 18.2px;
+          font-size: 0.65rem;
+        }
+
+        .hero-title {
+          margin-bottom: 0.65rem;
+        }
+
+        .hero-subtitle {
+          margin-bottom: 1.625rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero-btn {
+          padding: 7.8px 15.6px;
+          font-size: 0.585rem;
+        }
+      }
+
+      /* About Chakyarkoothu Section - Modern Minimalistic */
+      .about-section {
+        background: #ffffff;
+        padding: 120px 0;
+        position: relative;
+      }
+
+      .about-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 40px;
+      }
+
+      .about-header {
+        text-align: center;
+        margin-bottom: 100px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease;
+      }
+
+      .about-header.animate {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .about-symbol {
+        display: inline-block;
+        font-size: 2rem;
+        color: #d4af37;
+        margin-bottom: 32px;
+        opacity: 0.8;
+      }
+
+      .about-title {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        font-weight: 300;
+        color: #1a1a1a;
+        margin: 0;
+        letter-spacing: -0.02em;
+        line-height: 1.1;
+      }
+
+      .about-content {
+        max-width: 700px;
+        margin: 0 auto;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease 0.2s;
+      }
+
+      .about-content.animate {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .about-paragraph {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        font-size: 1.125rem;
+        line-height: 1.7;
+        color: #4a4a4a;
+        margin-bottom: 40px;
+        font-weight: 400;
+        text-align: left;
+      }
+
+      .about-paragraph:last-child {
+        margin-bottom: 0;
+      }
+
+      .about-highlight {
+        color: #d4af37;
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      .about-stats {
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+        margin-top: 80px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease 0.4s;
+      }
+
+      .about-stats.animate {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+
+      .stat-number {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        font-size: 2.5rem;
+        font-weight: 300;
+        color: #d4af37;
+        display: block;
+        line-height: 1;
+        margin-bottom: 8px;
+        letter-spacing: -0.02em;
+      }
+
+      .stat-label {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        font-size: 0.875rem;
+        font-weight: 400;
+        color: #808080;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .about-section {
+          padding: 80px 0;
+        }
+
+        .about-container {
+          padding: 0 24px;
+        }
+
+        .about-header {
+          margin-bottom: 60px;
+        }
+
+        .about-paragraph {
+          font-size: 1rem;
+          line-height: 1.6;
+          margin-bottom: 32px;
+        }
+
+        .about-stats {
+          flex-direction: column;
+          gap: 40px;
+          margin-top: 60px;
+        }
+
+        .stat-number {
+          font-size: 2rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .about-section {
+          padding: 60px 0;
+        }
+
+        .about-container {
+          padding: 0 20px;
+        }
+
+        .about-header {
+          margin-bottom: 48px;
+        }
+
+        .about-symbol {
+          font-size: 1.5rem;
+          margin-bottom: 24px;
+        }
+
+        .about-paragraph {
+          font-size: 0.95rem;
+          margin-bottom: 28px;
+        }
+
+        .about-stats {
+          margin-top: 48px;
+          gap: 32px;
+        }
+      }
+
+      /* Layers of the Sacred Stage Section - Modern Minimalistic */
+      .layers-section {
+        background: linear-gradient(
+          135deg,
+          #faf9f6 0%,
+          #f2ede4 50%,
+          #f8f5f1 100%
+        );
+        padding: 100px 0 120px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .layers-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.02'%3E%3Cpath d='M40 40c0-3.3-2.7-6-6-6s-6 2.7-6 6 2.7 6 6 6 6-2.7 6-6zm0-20c0-3.3-2.7-6-6-6s-6 2.7-6 6 2.7 6 6 6 6-2.7 6-6zm20 20c0-3.3-2.7-6-6-6s-6 2.7-6 6 2.7 6 6 6 6-2.7 6-6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        opacity: 0.5;
+      }
+
+      .layers-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 40px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .layers-header {
+        text-align: center;
+        margin-bottom: 80px;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease;
+      }
+
+      .layers-header.animate {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .layers-symbol {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, #ffffff, #f8f5f1);
+        border-radius: 50%;
+        margin-bottom: 28px;
+        box-shadow: 0 8px 25px rgba(212, 175, 55, 0.12),
+          inset 0 2px 8px rgba(255, 255, 255, 0.9);
+        position: relative;
+      }
+
+      .layers-symbol::before {
+        content: "🎭";
+        font-size: 1.8rem;
+        filter: drop-shadow(0 2px 4px rgba(212, 175, 55, 0.25));
+      }
+
+      .layers-title {
+        font-family: "Crimson Text", serif;
+        font-size: clamp(2.2rem, 4vw, 3.2rem);
+        font-weight: 600;
+        color: #2c1810;
+        margin: 0;
+        letter-spacing: -0.01em;
+        line-height: 1.2;
+        position: relative;
+      }
+
+      .layers-title::after {
+        content: "";
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #d4af37, transparent);
+        opacity: 0;
+        animation: layersTitleLine 1s ease-out 1s forwards;
+      }
+
+      /* Grid Layout */
+      .layers-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        max-width: 900px;
+        margin: 0 auto;
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 0.8s ease 0.3s;
+      }
+
+      .layers-grid.animate {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .layer-card {
+        background: linear-gradient(135deg, #ffffff 0%, #fefdfb 100%);
+        border-radius: 16px;
+        padding: 40px 32px;
+        text-align: center;
+        border: 1px solid rgba(212, 175, 55, 0.08);
+        box-shadow: 0 8px 32px rgba(44, 24, 16, 0.06),
+          0 2px 8px rgba(212, 175, 55, 0.08);
+        transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .layer-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          rgba(212, 175, 55, 0.02) 0%,
+          rgba(166, 124, 82, 0.01) 100%
+        );
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+
+      .layer-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 50px rgba(44, 24, 16, 0.12),
+          0 8px 25px rgba(212, 175, 55, 0.15);
+        border-color: rgba(212, 175, 55, 0.15);
+      }
+
+      .layer-card:hover::before {
+        opacity: 1;
+      }
+
+      .layer-card:hover .card-glow {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      .card-glow {
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(
+          135deg,
+          rgba(212, 175, 55, 0.1),
+          rgba(166, 124, 82, 0.05)
+        );
+        border-radius: 18px;
+        opacity: 0;
+        transform: scale(0.95);
+        transition: all 0.4s ease;
+        z-index: -1;
+      }
+
+      .card-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        margin-bottom: 24px;
+        position: relative;
+      }
+
+      .card-icon svg {
+        width: 36px;
+        height: 36px;
+        stroke: #a67c52;
+        stroke-width: 1.5;
+        fill: none;
+        transition: all 0.3s ease;
+      }
+
+      .layer-card:hover .card-icon svg {
+        stroke: #d4af37;
+        transform: scale(1.1);
+      }
+
+      .card-title {
+        font-family: "Crimson Text", serif;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #2c1810;
+        margin: 0 0 16px 0;
+        letter-spacing: 0.02em;
+        line-height: 1.3;
+      }
+
+      .card-description {
+        font-family: "Spectral", serif;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #5a4a3f;
+        margin: 0;
+        font-weight: 400;
+      }
+
+      @keyframes layersTitleLine {
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .layers-section {
+          padding: 80px 0;
+        }
+
+        .layers-container {
+          padding: 0 24px;
+        }
+
+        .layers-header {
+          margin-bottom: 60px;
+        }
+
+        .layers-grid {
+          grid-template-columns: 1fr;
+          gap: 24px;
+          max-width: 400px;
+        }
+
+        .layer-card {
+          padding: 32px 24px;
+        }
+
+        .card-icon {
+          width: 50px;
+          height: 50px;
+          margin-bottom: 20px;
+        }
+
+        .card-icon svg {
+          width: 30px;
+          height: 30px;
+        }
+
+        .card-title {
+          font-size: 1.25rem;
+          margin-bottom: 12px;
+        }
+
+        .card-description {
+          font-size: 0.9rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .layers-section {
+          padding: 60px 0;
+        }
+
+        .layers-container {
+          padding: 0 20px;
+        }
+
+        .layers-header {
+          margin-bottom: 48px;
+        }
+
+        .layers-symbol {
+          width: 60px;
+          height: 60px;
+          margin-bottom: 24px;
+        }
+
+        .layers-symbol::before {
+          font-size: 1.5rem;
+        }
+
+        .layer-card {
+          padding: 28px 20px;
+        }
+
+        .layers-grid {
+          gap: 20px;
+        }
+      }
+
+      /* Journey Section - Your Journey into Chakyarkoothu */
+      .journey-section {
+        background: linear-gradient(
+          135deg,
+          #faf8f5 0%,
+          #f5f2ed 50%,
+          #f8f5f0 100%
+        );
+        padding: 100px 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .journey-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4af37' fill-opacity='0.03' fill-rule='evenodd'%3E%3Cpath d='M30 30c0-8.28-6.72-15-15-15s-15 6.72-15 15 6.72 15 15 15 15-6.72 15-15zm0-30c0-8.28-6.72-15-15-15s-15 6.72-15 15 6.72 15 15 15 15-6.72 15-15z'/%3E%3C/g%3E%3C/svg%3E");
+        opacity: 0.4;
+      }
+
+      .journey-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 40px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .journey-header {
+        text-align: center;
+        margin-bottom: 80px;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease;
+      }
+
+      .journey-header.animate {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .journey-title {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+        font-weight: 600;
+        color: #2c1810;
+        margin: 0 0 20px 0;
+        letter-spacing: -0.01em;
+        line-height: 1.2;
+        position: relative;
+      }
+
+      .journey-title::after {
+        content: "";
+        position: absolute;
+        bottom: -16px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #d4af37, transparent);
+        opacity: 0;
+        animation: fadeInLine 1s ease-out 0.8s forwards;
+      }
+
+      .journey-subtitle {
+        font-family: "Spectral", serif;
+        font-size: 1.1rem;
+        color: #6b5b4f;
+        font-style: italic;
+        margin: 24px 0 0 0;
+        font-weight: 400;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.5;
+      }
+
+      .journey-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 60px;
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 0.8s ease 0.3s;
+      }
+
+      .journey-grid.animate {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .journey-card {
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 20px;
+        padding: 40px 30px;
+        text-align: center;
+        position: relative;
+        transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        border: 1px solid rgba(212, 175, 55, 0.12);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px rgba(44, 24, 16, 0.06);
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      .journey-card::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(
+          135deg,
+          rgba(212, 175, 55, 0.1) 0%,
+          rgba(166, 124, 82, 0.05) 50%,
+          rgba(212, 175, 55, 0.1) 100%
+        );
+        border-radius: 22px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: -1;
+      }
+
+      .journey-card:hover::before {
+        opacity: 1;
+      }
+
+      .journey-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 20px 60px rgba(44, 24, 16, 0.12);
+        border-color: rgba(212, 175, 55, 0.25);
+        background: rgba(255, 255, 255, 0.95);
+      }
+
+      .journey-card:nth-child(1) {
+        animation: slideInUp 0.8s ease-out 0.1s forwards;
+      }
+
+      .journey-card:nth-child(2) {
+        animation: slideInUp 0.8s ease-out 0.2s forwards;
+      }
+
+      .journey-card:nth-child(3) {
+        animation: slideInUp 0.8s ease-out 0.3s forwards;
+      }
+
+      .journey-card:nth-child(4) {
+        animation: slideInUp 0.8s ease-out 0.4s forwards;
+      }
+
+      .journey-step-number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-bottom: 24px;
+        height: 60px;
+      }
+
+      .step-circle {
+        font-size: 2.5rem;
+        filter: drop-shadow(0 4px 8px rgba(212, 175, 55, 0.3));
+        position: relative;
+        z-index: 2;
+      }
+
+      .step-num {
+        position: absolute;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #2c1810;
+        z-index: 3;
+        text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+      }
+
+      .journey-card-title {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #2c1810;
+        margin: 0 0 16px 0;
+        letter-spacing: 0.01em;
+        line-height: 1.3;
+      }
+
+      .journey-card-description {
+        font-family: "Spectral", serif;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #5a4a3f;
+        margin: 0;
+        font-weight: 400;
+      }
+
+      .journey-cta {
+        text-align: center;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.8s ease 0.6s;
+      }
+
+      .journey-cta.animate {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .journey-download-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 32px;
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.9) 0%,
+          rgba(248, 245, 240, 0.8) 100%
+        );
+        border: 2px solid rgba(212, 175, 55, 0.3);
+        border-radius: 50px;
+        text-decoration: none;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #2c1810;
+        transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px rgba(212, 175, 55, 0.15);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .journey-download-btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(212, 175, 55, 0.1),
+          transparent
+        );
+        transition: left 0.6s ease;
+      }
+
+      .journey-download-btn:hover::before {
+        left: 100%;
+      }
+
+      .journey-download-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 16px 48px rgba(212, 175, 55, 0.25);
+        border-color: rgba(212, 175, 55, 0.5);
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(252, 249, 244, 0.95) 100%
+        );
+      }
+
+      .btn-icon {
+        font-size: 1.2rem;
+        filter: drop-shadow(0 2px 4px rgba(212, 175, 55, 0.3));
+      }
+
+      .btn-text {
+        position: relative;
+        z-index: 2;
+      }
+
+      @keyframes fadeInLine {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        .journey-section {
+          padding: 80px 0;
+        }
+
+        .journey-container {
+          padding: 0 24px;
+        }
+
+        .journey-header {
+          margin-bottom: 60px;
+        }
+
+        .journey-grid {
+          grid-template-columns: 1fr;
+          gap: 30px;
+          margin-bottom: 50px;
+        }
+
+        .journey-card {
+          padding: 32px 24px;
+        }
+
+        .journey-card-title {
+          font-size: 1.4rem;
+        }
+
+        .journey-card-description {
+          font-size: 0.95rem;
+        }
+
+        .journey-download-btn {
+          padding: 14px 28px;
+          font-size: 1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .journey-section {
+          padding: 60px 0;
+        }
+
+        .journey-container {
+          padding: 0 20px;
+        }
+
+        .journey-card {
+          padding: 28px 20px;
+        }
+
+        .step-circle {
+          font-size: 2rem;
+        }
+
+        .step-num {
+          font-size: 1.2rem;
+        }
+
+        .journey-card-title {
+          font-size: 1.3rem;
+          margin-bottom: 12px;
+        }
+
+        .journey-card-description {
+          font-size: 0.9rem;
+        }
+
+        .journey-download-btn {
+          padding: 12px 24px;
+          font-size: 0.95rem;
+          gap: 10px;
+        }
+      }
+
+      /* Gallery Section - Moments from the Koothambalam */
+      .gallery-section {
+        background: linear-gradient(135deg, #faf8f5 0%, #f4f1ec 100%);
+        padding: 100px 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .gallery-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4af37' fill-opacity='0.02' fill-rule='evenodd'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm0-20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z'/%3E%3C/g%3E%3C/svg%3E");
+        opacity: 0.3;
+      }
+
+      .gallery-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .gallery-header {
+        text-align: center;
+        margin-bottom: 80px;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease;
+      }
+
+      .gallery-header.animate {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .gallery-symbol {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #ffffff, #f8f5f1);
+        border-radius: 50%;
+        margin-bottom: 24px;
+        box-shadow: 0 6px 20px rgba(212, 175, 55, 0.15),
+          inset 0 2px 6px rgba(255, 255, 255, 0.8);
+        position: relative;
+      }
+
+      .gallery-symbol::before {
+        content: "👁️";
+        font-size: 1.5rem;
+        filter: drop-shadow(0 2px 4px rgba(212, 175, 55, 0.25));
+      }
+
+      .gallery-title {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(2.2rem, 4vw, 3.2rem);
+        font-weight: 600;
+        color: #2c1810;
+        margin: 0 0 16px 0;
+        letter-spacing: -0.01em;
+        line-height: 1.2;
+        position: relative;
+      }
+
+      .gallery-title::after {
+        content: "";
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #d4af37, transparent);
+        opacity: 0;
+        animation: galleryTitleLine 1s ease-out 1s forwards;
+      }
+
+      .gallery-caption {
+        font-family: "Spectral", serif;
+        font-size: 1rem;
+        color: #6b5b4f;
+        font-style: italic;
+        margin: 24px 0 0 0;
+        font-weight: 400;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* Gallery Grid */
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 0.8s ease 0.3s;
+      }
+
+      .gallery-grid.animate {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .gallery-item {
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        box-shadow: 0 4px 20px rgba(44, 24, 16, 0.08);
+        background: #ffffff;
+        border: 1px solid rgba(212, 175, 55, 0.1);
+      }
+
+      .gallery-item::before {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        right: 4px;
+        bottom: 4px;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        border-radius: 8px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      .gallery-item:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 40px rgba(44, 24, 16, 0.15);
+      }
+
+      .gallery-item:hover::before {
+        opacity: 1;
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+      }
+
+      .gallery-item:hover .gallery-image {
+        transform: scale(1.05);
+      }
+
+      .gallery-item:hover .gallery-overlay {
+        opacity: 1;
+      }
+
+      .gallery-image {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+        display: block;
+      }
+
+      .gallery-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(212, 175, 55, 0.85) 0%,
+          rgba(166, 124, 82, 0.75) 100%
+        );
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+      }
+
+      .gallery-icon {
+        color: #ffffff;
+        font-size: 2rem;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        transform: scale(0.8);
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover .gallery-icon {
+        transform: scale(1);
+      }
+
+      /* Lightbox Modal */
+      .lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
+      }
+
+      .lightbox.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .lightbox-content {
+        position: relative;
+        max-width: 90%;
+        max-height: 90%;
+        transform: scale(0.9);
+        transition: transform 0.3s ease;
+      }
+
+      .lightbox.active .lightbox-content {
+        transform: scale(1);
+      }
+
+      .lightbox-image {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        border-radius: 8px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+      }
+
+      .lightbox-close {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        background: rgba(212, 175, 55, 0.9);
+        border: none;
+        border-radius: 50%;
+        color: #2c1810;
+        font-size: 1.2rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+      }
+
+      .lightbox-close:hover {
+        background: #d4af37;
+        transform: rotate(90deg);
+      }
+
+      @keyframes galleryTitleLine {
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .gallery-section {
+          padding: 80px 0;
+        }
+
+        .gallery-container {
+          padding: 0 24px;
+        }
+
+        .gallery-header {
+          margin-bottom: 60px;
+        }
+
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+
+        .gallery-image {
+          height: 220px;
+        }
+
+        .gallery-caption {
+          font-size: 0.9rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .gallery-section {
+          padding: 60px 0;
+        }
+
+        .gallery-container {
+          padding: 0 20px;
+        }
+
+        .gallery-header {
+          margin-bottom: 48px;
+        }
+
+        .gallery-symbol {
+          width: 50px;
+          height: 50px;
+          margin-bottom: 20px;
+        }
+
+        .gallery-symbol::before {
+          font-size: 1.3rem;
+        }
+
+        .gallery-grid {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+
+        .gallery-image {
+          height: 200px;
+        }
+
+        .gallery-caption {
+          font-size: 0.85rem;
+          margin-top: 20px;
+        }
+
+        .lightbox-content {
+          max-width: 95%;
+          max-height: 80%;
+        }
+
+        .lightbox-close {
+          top: -35px;
+          width: 35px;
+          height: 35px;
+          font-size: 1rem;
+        }
+      }
+
+      /* Timeline Section - Theatre Born in Temples */
+      .timeline-section {
+        background: linear-gradient(
+          135deg,
+          #faf8f3 0%,
+          #f5f0e8 50%,
+          #f2ede2 100%
+        );
+        padding: 120px 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .timeline-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.03'%3E%3Cpath d='M30 30c0-2.2-1.8-4-4-4s-4 1.8-4 4 1.8 4 4 4 4-1.8 4-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        opacity: 0.4;
+      }
+
+      .timeline-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 40px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .timeline-header {
+        text-align: center;
+        margin-bottom: 80px;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease;
+      }
+
+      .timeline-header.animate {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .timeline-symbol {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #f8f5f0, #fff);
+        border-radius: 50%;
+        margin-bottom: 32px;
+        box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15),
+          inset 0 2px 10px rgba(255, 255, 255, 0.8);
+        position: relative;
+      }
+
+      .timeline-symbol::before {
+        content: "🛕";
+        font-size: 2rem;
+        filter: drop-shadow(0 2px 4px rgba(212, 175, 55, 0.3));
+      }
+
+      .timeline-title {
+        font-family: "Crimson Text", serif;
+        font-size: clamp(2.5rem, 4vw, 3.5rem);
+        font-weight: 600;
+        color: #2c1810;
+        margin: 0;
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+        position: relative;
+      }
+
+      .timeline-title::after {
+        content: "";
+        position: absolute;
+        bottom: -16px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #d4af37, transparent);
+        opacity: 0;
+        animation: timelineTitleLine 1s ease-out 1.2s forwards;
+      }
+
+      .timeline-subtitle {
+        font-family: "Spectral", serif;
+        font-size: 1.125rem;
+        color: #6b5b4f;
+        font-style: italic;
+        margin-top: 24px;
+        margin-bottom: 0;
+        font-weight: 400;
+      }
+
+      /* Timeline Layout */
+      .timeline-wrapper {
+        position: relative;
+        margin-top: 60px;
+      }
+
+      .timeline-spine {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(
+          to bottom,
+          transparent 0%,
+          #d4af37 15%,
+          #a67c52 50%,
+          #d4af37 85%,
+          transparent 100%
+        );
+        transform: translateX(-50%);
+        opacity: 0;
+        animation: timelineSpineReveal 1.5s ease-out 0.5s forwards;
+      }
+
+      .timeline-spine::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 12px;
+        height: 12px;
+        background: radial-gradient(circle, #d4af37, #a67c52);
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+      }
+
+      .timeline-spine::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 12px;
+        height: 12px;
+        background: radial-gradient(circle, #d4af37, #a67c52);
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: 120px;
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      .timeline-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .timeline-item.animate {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      .timeline-item:nth-child(odd) .timeline-content {
+        padding-right: 60px;
+        text-align: right;
+        margin-right: calc(50% + 30px);
+      }
+
+      .timeline-item:nth-child(even) .timeline-content {
+        padding-left: 60px;
+        text-align: left;
+        margin-left: calc(50% + 30px);
+      }
+
+      .timeline-dot {
+        position: absolute;
+        left: 50%;
+        top: 24px;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        background: linear-gradient(135deg, #fff, #f8f5f0);
+        border: 3px solid #d4af37;
+        border-radius: 50%;
+        z-index: 10;
+        box-shadow: 0 0 0 6px rgba(212, 175, 55, 0.1),
+          0 4px 15px rgba(212, 175, 55, 0.3);
+        transition: all 0.4s ease;
+      }
+
+      .timeline-item.animate .timeline-dot {
+        box-shadow: 0 0 0 12px rgba(212, 175, 55, 0.15),
+          0 6px 20px rgba(212, 175, 55, 0.4);
+        transform: translateX(-50%) scale(1.1);
+      }
+
+      .timeline-content {
+        background: rgba(255, 255, 255, 0.7);
+        padding: 40px;
+        border-radius: 12px;
+        position: relative;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(212, 175, 55, 0.1);
+        box-shadow: 0 10px 40px rgba(212, 175, 55, 0.1),
+          0 2px 10px rgba(0, 0, 0, 0.05);
+        transition: all 0.4s ease;
+      }
+
+      .timeline-item:hover .timeline-content {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 50px rgba(212, 175, 55, 0.15),
+          0 5px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .timeline-date {
+        font-family: "Cinzel", serif;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #d4af37;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .timeline-date::before {
+        content: "";
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.8;
+      }
+
+      .timeline-item:nth-child(1) .timeline-date::before {
+        content: "🪔";
+        font-size: 1.2rem;
+      }
+
+      .timeline-item:nth-child(2) .timeline-date::before {
+        content: "🏛️";
+        font-size: 1.2rem;
+      }
+
+      .timeline-item:nth-child(3) .timeline-date::before {
+        content: "📜";
+        font-size: 1.2rem;
+      }
+
+      .timeline-item:nth-child(4) .timeline-date::before {
+        content: "🌍";
+        font-size: 1.2rem;
+      }
+
+      .timeline-description {
+        font-family: "Spectral", serif;
+        font-size: 1.125rem;
+        line-height: 1.7;
+        color: #4a3d2f;
+        margin: 0;
+        font-weight: 400;
+      }
+
+      .timeline-highlight {
+        color: #d4af37;
+        font-weight: 500;
+      }
+
+      /* Animations */
+      @keyframes timelineTitleLine {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes timelineSpineReveal {
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1024px) {
+        .timeline-container {
+          padding: 0 30px;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+          padding-right: 40px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+          padding-left: 40px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .timeline-section {
+          padding: 80px 0;
+        }
+
+        .timeline-container {
+          padding: 0 24px;
+        }
+
+        .timeline-header {
+          margin-bottom: 60px;
+        }
+
+        .timeline-spine {
+          left: 30px;
+        }
+
+        .timeline-item {
+          margin-bottom: 80px;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content,
+        .timeline-item:nth-child(even) .timeline-content {
+          margin-left: 60px;
+          margin-right: 0;
+          padding: 30px;
+          text-align: left;
+        }
+
+        .timeline-dot {
+          left: 30px;
+        }
+
+        .timeline-date {
+          font-size: 1.125rem;
+        }
+
+        .timeline-description {
+          font-size: 1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .timeline-section {
+          padding: 60px 0;
+        }
+
+        .timeline-container {
+          padding: 0 20px;
+        }
+
+        .timeline-header {
+          margin-bottom: 48px;
+        }
+
+        .timeline-symbol {
+          width: 60px;
+          height: 60px;
+          margin-bottom: 24px;
+        }
+
+        .timeline-symbol::before {
+          font-size: 1.5rem;
+        }
+
+        .timeline-subtitle {
+          font-size: 1rem;
+          margin-top: 20px;
+        }
+
+        .timeline-spine {
+          left: 20px;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content,
+        .timeline-item:nth-child(even) .timeline-content {
+          margin-left: 50px;
+          padding: 24px;
+        }
+
+        .timeline-dot {
+          left: 20px;
+          width: 16px;
+          height: 16px;
+          top: 20px;
+        }
+
+        .timeline-date {
+          font-size: 1rem;
+          margin-bottom: 12px;
+        }
+
+        .timeline-description {
+          font-size: 0.95rem;
+          line-height: 1.6;
+        }
+      }
+
+      /* Call to Action Section - Take Your First Sacred Step */
+      .cta-section {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2c1810 100%);
+        padding: 100px 0;
+        position: relative;
+        margin: 0;
+      }
+
+      .cta-container {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 0 40px;
+        text-align: center;
+      }
+
+      .cta-title {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(2.25rem, 4vw, 3rem);
+        font-weight: 400;
+        color: #ffffff;
+        margin: 0 0 16px 0;
+        letter-spacing: 0.01em;
+        line-height: 1.3;
+      }
+
+      .cta-subtitle {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(1rem, 2vw, 1.125rem);
+        color: rgba(255, 255, 255, 0.8);
+        margin: 0 0 48px 0;
+        font-style: italic;
+        font-weight: 300;
+        line-height: 1.5;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 48px;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .cta-btn {
+        padding: 14px 28px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1rem;
+        font-weight: 500;
+        text-decoration: none;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        letter-spacing: 0.3px;
+        cursor: pointer;
+        min-width: 140px;
+        text-align: center;
+        border: 1px solid transparent;
+      }
+
+      .cta-btn-primary {
+        background: #d4af37;
+        color: #1a1a1a;
+        border: 1px solid #d4af37;
+      }
+
+      .cta-btn-primary:hover {
+        background: #e6c247;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+      }
+
+      .cta-btn-secondary {
+        background: transparent;
+        color: #ffffff;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .cta-btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.5);
+        transform: translateY(-1px);
+      }
+
+      /* Responsive Design for CTA */
+      @media (max-width: 768px) {
+        .cta-section {
+          padding: 80px 0;
+        }
+
+        .cta-container {
+          padding: 0 24px;
+        }
+
+        .cta-subtitle {
+          margin-bottom: 40px;
+        }
+
+        .cta-buttons {
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .cta-btn {
+          width: 100%;
+          max-width: 250px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .cta-section {
+          padding: 60px 0;
+        }
+
+        .cta-container {
+          padding: 0 20px;
+        }
+
+        .cta-subtitle {
+          margin-bottom: 32px;
+        }
+
+        .cta-btn {
+          padding: 12px 24px;
+          font-size: 0.95rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main Navigation -->
+    <nav class="main-navbar" id="navbar">
+      <a href="index.html" class="logo">Kutiyāttakkālam</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle">Courses <i class="fas fa-caret-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="kootiyattam.html">Kutiyattam</a></li>
+            <li><a href="nangiarkoothu.html">NangiarKoothu</a></li>
+            <li><a href="chakyarkoothu.html">Chakyarkoothu</a></li>
+            <li><a href="mizhavu.html">Mizhavu</a></li>
+            <li><a href="edakka.html">Edakka</a></li>
+            <li><a href="chutti.html">Chutti</a></li>
+          </ul>
+        </li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="mobile-menu-btn" id="mobile-menu-btn">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+    <nav class="mobile-nav" id="mobile-nav">
+      <div class="close-btn" id="close-btn">
+        <div class="close-icon">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <div class="mobile-dropdown">
+          <a href="" class="mobile-dropdown-toggle">Courses <i class="fas fa-caret-down"></i></a>
+          <div class="mobile-dropdown-menu">
+            <a href="kootiyattam.html">Kutiyattam</a>
+            <a href="nangiarkoothu.html">NangiarKoothu</a>
+            <a href="chakyarkoothu.html">Chakyarkoothu</a>
+            <a href="mizhavu.html">Mizhavu</a>
+            <a href="edakka.html">Edakka</a>
+            <a href="chutti.html">Chutti</a>
+          </div>
+        </div>
+        <a href="#gallery">Gallery</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </nav>
+
+
+    <section class="hero-section">
+      <div class="hero-background"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Chakyarkoothu – The Classical Art of Storytelling
+        </h1>
+        <p class="hero-subtitle">
+          Where wit meets wisdom in the sacred art of narrative performance.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#about" class="hero-btn btn-primary">Start Learning</a>
+          <a href="#about" class="hero-btn btn-secondary"
+            >Know the Tradition</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- About Chakyarkoothu Section -->
+    <section class="about-section" id="about">
+      <div class="about-container">
+        <div class="about-header">
+          <div class="about-symbol">🎭</div>
+          <h2 class="about-title">About Chakyarkoothu</h2>
+        </div>
+
+        <div class="about-content">
+          <p class="about-paragraph">
+            <span class="about-highlight">Chakyarkoothu</span> is a traditional
+            solo performance art from Kerala, practiced for over
+            <span class="about-highlight">1,000 years</span> by the Chakyar
+            community. It combines storytelling, humor, and social commentary
+            through expressive narration — where the performer becomes the voice
+            of both tradition and contemporary wisdom.
+          </p>
+
+          <p class="about-paragraph">
+            Recognized as an important
+            <span class="about-highlight">classical art form</span> of India,
+            Chakyarkoothu preserves ancient stories while adapting to modern
+            times. Through masterful voice modulation, witty improvisation, and
+            the rhythmic accompaniment of the Mizhavu drum, it transcends mere
+            entertainment — becoming
+            <span class="about-highlight">education through art</span>.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Timeline Section - Theatre Born in Temples -->
+    <section class="timeline-section" id="timeline">
+      <div class="timeline-container">
+        <div class="timeline-header">
+          <div class="timeline-symbol"></div>
+          <h2 class="timeline-title">Art Born in Sacred Spaces</h2>
+          <p class="timeline-subtitle">
+            A journey through centuries — from temple courtyards to global
+            stages
+          </p>
+        </div>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-spine"></div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">~8th Century CE</div>
+              <p class="timeline-description">
+                <span class="timeline-highlight">Chakyarkoothu emerges</span> in
+                the temple courtyards of Kerala as a form of solo storytelling,
+                passed through oral tradition within the Chakyar community. Born
+                from the fusion of
+                <span class="timeline-highlight"
+                  >classical literature and folk wisdom</span
+                >, it becomes a bridge between scholarly knowledge and popular
+                entertainment.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">Up to 20th Century</div>
+              <p class="timeline-description">
+                Performed exclusively by the
+                <span class="timeline-highlight">Chakyar community</span>
+                in temple premises and royal courts throughout Kerala. These
+                performances, held in open courtyards and intimate spaces,
+                combine religious storytelling with social satire, becoming the
+                <span class="timeline-highlight">voice of the community</span>.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">20th Century Onward</div>
+              <p class="timeline-description">
+                The art form expands beyond traditional boundaries with
+                <span class="timeline-highlight"
+                  >acclaimed performers like Mani Madhava Chakyar</span
+                >
+                bringing it to modern stages. Educational institutions and
+                cultural organizations begin documenting and teaching the art,
+                ensuring this
+                <span class="timeline-highlight">storytelling tradition</span>
+                reaches new audiences worldwide.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">
+                21st Century – Cultural Renaissance
+              </div>
+              <p class="timeline-description">
+                Recognized as an important
+                <span class="timeline-highlight"
+                  >Classical Art Form of India</span
+                >
+                by cultural institutions. Contemporary practitioners innovate
+                while preserving traditional elements, ensuring
+                <span class="timeline-highlight"
+                  >Chakyarkoothu's relevance</span
+                >
+                in modern cultural landscape while maintaining its ancient
+                roots.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layers of the Sacred Stage Section -->
+    <section class="layers-section" id="layers">
+      <div class="layers-container">
+        <div class="layers-header">
+          <div class="layers-symbol"></div>
+          <h2 class="layers-title">Elements of Storytelling Mastery</h2>
+        </div>
+
+        <div class="layers-grid">
+          <!-- Abhinaya Card -->
+          <div class="layer-card">
+            <div class="card-glow"></div>
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2Z"
+                />
+                <path
+                  d="M21 9V7L15 7.5V9M21 15C21 15.6 20.6 16 20 16S19 15.6 19 15V9H21V15Z"
+                />
+                <path
+                  d="M15 7.5C15 6.1 13.9 5 12.5 5S10 6.1 10 7.5V9H15V7.5Z"
+                />
+                <path d="M5 9V15C5 15.6 4.4 16 3.8 16S3 15.6 3 15V9H5Z" />
+                <path
+                  d="M9 7.5V9H15V7.5M9 7.5C9 6.1 7.9 5 6.5 5S4 6.1 4 7.5V9H9V7.5Z"
+                />
+                <circle cx="8" cy="10" r="1" />
+                <circle cx="16" cy="10" r="1" />
+                <path d="M8 13.5C8.5 14.5 10 15 12 15S15.5 14.5 16 13.5" />
+              </svg>
+            </div>
+            <h3 class="card-title">Voice Modulation</h3>
+            <p class="card-description">
+              The art of changing vocal tones and rhythms to bring different
+              characters and emotions to life in storytelling.
+            </p>
+          </div>
+
+          <!-- Mudras Card -->
+          <div class="layer-card">
+            <div class="card-glow"></div>
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z"
+                />
+                <path
+                  d="M8 12C8 13.1 7.1 14 6 14S4 13.1 4 12C4 10.9 4.9 10 6 10S8 10.9 8 12Z"
+                />
+                <path
+                  d="M20 12C20 13.1 19.1 14 18 14S16 13.1 16 12C16 10.9 16.9 10 18 10S20 10.9 20 12Z"
+                />
+                <path d="M9 18L12 15L15 18" />
+                <path
+                  d="M6 20C7.1 20 8 19.1 8 18C8 16.9 7.1 16 6 16C4.9 16 4 16.9 4 18C4 19.1 4.9 20 6 20Z"
+                />
+                <path
+                  d="M18 20C19.1 20 20 19.1 20 18C20 16.9 19.1 16 18 16C16.9 16 16 16.9 16 18C16 19.1 16.9 20 18 20Z"
+                />
+              </svg>
+            </div>
+            <h3 class="card-title">Narrative Techniques</h3>
+            <p class="card-description">
+              Sophisticated methods of storytelling including flashbacks,
+              dialogue, and dramatic pauses to engage the audience.
+            </p>
+          </div>
+
+          <!-- Raga & Rhythm Card -->
+          <div class="layer-card">
+            <div class="card-glow"></div>
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6V12L16 14" />
+                <circle cx="12" cy="4" r="2" />
+                <circle cx="20" cy="12" r="2" />
+                <circle cx="12" cy="20" r="2" />
+                <circle cx="4" cy="12" r="2" />
+                <path d="M8 8L12 12L16 8" />
+                <path d="M8 16L12 12L16 16" />
+              </svg>
+            </div>
+            <h3 class="card-title">Improvisation & Wit</h3>
+            <p class="card-description">
+              Spontaneous commentary and humor that adapts ancient stories to
+              contemporary contexts and audience reactions.
+            </p>
+          </div>
+
+          <!-- Costume & Chutti Card -->
+          <div class="layer-card">
+            <div class="card-glow"></div>
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12S6.48 22 12 22 22 17.52 22 12 17.52 2 12 2Z"
+                />
+                <path
+                  d="M12 6C14.21 6 16 7.79 16 10C16 12.21 14.21 14 12 14C9.79 14 8 12.21 8 10C8 7.79 9.79 6 12 6Z"
+                />
+                <path
+                  d="M6 19C6 16.79 7.79 15 10 15H14C16.21 15 18 16.79 18 19"
+                />
+                <circle cx="9" cy="9" r="1" />
+                <circle cx="15" cy="9" r="1" />
+                <path d="M9 12C9.5 13 10.5 13.5 12 13.5S14.5 13 15 12" />
+                <path d="M8 4L12 2L16 4" />
+                <path d="M6 6L8 4L10 6" />
+                <path d="M14 6L16 4L18 6" />
+              </svg>
+            </div>
+            <h3 class="card-title">Mizhavu Accompaniment</h3>
+            <p class="card-description">
+              The traditional drum provides rhythmic foundation and dramatic
+              emphasis, enhancing the storytelling experience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section - Moments from the Koothambalam -->
+    <section class="gallery-section" id="gallery">
+      <div class="gallery-container">
+        <div class="gallery-header">
+          <div class="gallery-symbol"></div>
+          <h2 class="gallery-title">Moments from the Koothambalam</h2>
+          <p class="gallery-caption">
+            Sacred stills from a living tradition. Each frame, a moment of
+            rhythm, silence, and devotion.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item" data-src="kutg1.jpg">
+            <img
+              src="kutg1.jpg"
+              alt="Kutiyattam Performance in Temple"
+              class="gallery-image"
+            />
+            <div class="gallery-overlay">
+              <i class="fas fa-expand-alt gallery-icon"></i>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-src="kutg2.jpg">
+            <img
+              src="kutg2.jpg"
+              alt="Chutti Makeup Application"
+              class="gallery-image"
+            />
+            <div class="gallery-overlay">
+              <i class="fas fa-expand-alt gallery-icon"></i>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-src="kutg3.jpg">
+            <img
+              src="kutg3.jpg"
+              alt="Mizhavu Percussion Instrument"
+              class="gallery-image"
+            />
+            <div class="gallery-overlay">
+              <i class="fas fa-expand-alt gallery-icon"></i>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-src="kutg4.jpg">
+            <img
+              src="kutg4.jpg"
+              alt="Traditional Costume Details"
+              class="gallery-image"
+            />
+            <div class="gallery-overlay">
+              <i class="fas fa-expand-alt gallery-icon"></i>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-src="kutg5.jpg">
+            <img
+              src="kutg5.jpg"
+              alt="Backstage Ritual Preparation"
+              class="gallery-image"
+            />
+            <div class="gallery-overlay">
+              <i class="fas fa-expand-alt gallery-icon"></i>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-src="kutg6.jpg">
+            <img
+              src="kutg6.jpg"
+              alt="Koothambalam Temple Theatre"
+              class="gallery-image"
+            />
+            <div class="gallery-overlay">
+              <i class="fas fa-expand-alt gallery-icon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section - Take Your First Sacred Step -->
+    <section class="cta-section" id="cta">
+      <div class="cta-container">
+        <h2 class="cta-title">Take Your First Sacred Step</h2>
+        <p class="cta-subtitle">
+          Join the living tradition — guided, grounded, and gracefully
+          preserved.
+        </p>
+        <div class="cta-buttons">
+          <a href="index.html#contact" class="cta-btn cta-btn-primary">Enroll Now</a>
+          <a href="index.html#contact" class="cta-btn cta-btn-secondary"
+            >Request Details</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+      <div class="lightbox-content">
+        <button class="lightbox-close" id="lightbox-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <img src="" alt="" class="lightbox-image" id="lightbox-image" />
+      </div>
+    </div>
+
+    <script>
+      // Mobile menu functionality
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileNav = document.getElementById("mobile-nav");
+      const mobileNavOverlay = document.getElementById("mobile-nav-overlay");
+      const closeBtn = document.getElementById("close-btn");
+
+      function openMobileMenu() {
+        mobileMenuBtn.classList.add("active");
+        mobileNav.classList.add("active");
+        mobileNavOverlay.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeMobileMenu() {
+        mobileMenuBtn.classList.remove("active");
+        mobileNav.classList.remove("active");
+        mobileNavOverlay.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+
+      mobileMenuBtn.addEventListener("click", openMobileMenu);
+      closeBtn.addEventListener("click", closeMobileMenu);
+      mobileNavOverlay.addEventListener("click", closeMobileMenu);
+
+      // Close mobile menu when clicking on a nav link
+      document.querySelectorAll(".mobile-nav-links a").forEach((link) => {
+        // Only close menu if not inside the courses expandable menu or the courses toggle
+        if (!link.closest('.mobile-dropdown-menu') && !link.classList.contains('mobile-dropdown-toggle')) {
+          link.addEventListener("click", closeMobileMenu);
+        }
+      });
+
+      // Sticky navbar functionality
+      const navbar = document.getElementById("navbar");
+      const heroSection = document.querySelector(".hero-section");
+
+      window.addEventListener("scroll", () => {
+        const scrolled = window.pageYOffset;
+        const heroHeight = heroSection.offsetHeight;
+
+        // Sticky navbar
+        if (scrolled > heroHeight - 100) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+
+        // Parallax effect for background
+        const background = document.querySelector(".hero-background");
+        if (background) {
+          background.style.transform = `scale(1.1) translateY(${
+            scrolled * 0.5
+          }px)`;
+        }
+      });
+
+      // Mobile dropdown (expandable) for Courses
+      const mobileDropdown = document.querySelector('.mobile-dropdown');
+      const mobileDropdownToggle = document.querySelector('.mobile-dropdown-toggle');
+      if (mobileDropdown && mobileDropdownToggle) {
+        mobileDropdownToggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          mobileDropdown.classList.toggle('open');
+        });
+      }
+
+
+      // Add smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Close mobile menu on window resize
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 768) {
+          closeMobileMenu();
+        }
+      });
+
+      // About section scroll animation
+      const aboutHeader = document.querySelector(".about-header");
+      const aboutContent = document.querySelector(".about-content");
+      const aboutStats = document.querySelector(".about-stats");
+
+      const observerOptions = {
+        threshold: 0.3,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const aboutObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+          }
+        });
+      }, observerOptions);
+
+      if (aboutHeader) aboutObserver.observe(aboutHeader);
+      if (aboutContent) aboutObserver.observe(aboutContent);
+      if (aboutStats) aboutObserver.observe(aboutStats);
+
+      // Layers section scroll animations
+      const layersHeader = document.querySelector(".layers-header");
+      const layersGrid = document.querySelector(".layers-grid");
+
+      const layersObserverOptions = {
+        threshold: 0.2,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const layersObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+          }
+        });
+      }, layersObserverOptions);
+
+      if (layersHeader) layersObserver.observe(layersHeader);
+      if (layersGrid) layersObserver.observe(layersGrid);
+
+      // Journey section scroll animations
+      const journeyHeader = document.querySelector(".journey-header");
+      const journeyGrid = document.querySelector(".journey-grid");
+      const journeyCards = document.querySelectorAll(".journey-card");
+      const journeyCta = document.querySelector(".journey-cta");
+
+      const journeyObserverOptions = {
+        threshold: 0.2,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const journeyObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+          }
+        });
+      }, journeyObserverOptions);
+
+      // Journey cards individual animation
+      const journeyCardObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+              }, index * 100);
+            }
+          });
+        },
+        {
+          threshold: 0.3,
+          rootMargin: "0px 0px -30px 0px",
+        }
+      );
+
+      if (journeyHeader) journeyObserver.observe(journeyHeader);
+      if (journeyGrid) journeyObserver.observe(journeyGrid);
+      if (journeyCta) journeyObserver.observe(journeyCta);
+
+      journeyCards.forEach((card) => {
+        journeyCardObserver.observe(card);
+      });
+
+      // Timeline section scroll animations
+      const timelineHeader = document.querySelector(".timeline-header");
+      const timelineItems = document.querySelectorAll(".timeline-item");
+
+      const timelineObserverOptions = {
+        threshold: 0.2,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const timelineObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+          }
+        });
+      }, timelineObserverOptions);
+
+      // Observe timeline header
+      if (timelineHeader) {
+        timelineObserver.observe(timelineHeader);
+      }
+
+      // Observe timeline items with staggered delay
+      timelineItems.forEach((item, index) => {
+        item.style.transitionDelay = `${index * 0.2}s`;
+        timelineObserver.observe(item);
+      });
+
+      // Gallery section scroll animations
+      const galleryHeader = document.querySelector(".gallery-header");
+      const galleryGrid = document.querySelector(".gallery-grid");
+
+      const galleryObserverOptions = {
+        threshold: 0.2,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const galleryObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+          }
+        });
+      }, galleryObserverOptions);
+
+      if (galleryHeader) galleryObserver.observe(galleryHeader);
+      if (galleryGrid) galleryObserver.observe(galleryGrid);
+
+      // Gallery lightbox functionality
+      const galleryItems = document.querySelectorAll(".gallery-item");
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImage = document.getElementById("lightbox-image");
+      const lightboxClose = document.getElementById("lightbox-close");
+
+      function openLightbox(imageSrc, imageAlt) {
+        lightboxImage.src = imageSrc;
+        lightboxImage.alt = imageAlt;
+        lightbox.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("active");
+        document.body.style.overflow = "";
+        setTimeout(() => {
+          lightboxImage.src = "";
+          lightboxImage.alt = "";
+        }, 300);
+      }
+
+      // Add click events to gallery items
+      galleryItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          const imageSrc = item.dataset.src;
+          const imageAlt = item.querySelector(".gallery-image").alt;
+          openLightbox(imageSrc, imageAlt);
+        });
+      });
+
+      // Close lightbox events
+      lightboxClose.addEventListener("click", closeLightbox);
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      // Close lightbox with escape key
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && lightbox.classList.contains("active")) {
+          closeLightbox();
+        }
+      });
+    </script>
+  </body>
+</html>
